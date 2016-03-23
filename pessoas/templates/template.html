@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Pessoas">
+<head>
+	<meta charset="UTF-8">
+	<title>Crud Angular</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+	<div id="wrap">
+		<div class="bs-example" data-example-id="inverted-navbar">
+			<nav class="navbar navbar-inverse"> 
+				<div class="container-fluid">  
+					<div class="navbar-header"> 
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false"> 
+							<span class="sr-only">Toggle navigation</span> 
+							<span class="icon-bar"></span> 
+							<span class="icon-bar"></span> 
+							<span class="icon-bar"></span> 
+						</button> 
+						<a class="navbar-brand" href="#">Crud Angular</a> 
+					</div>  
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9"> 
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li> 
+							<li><a href="#/adicionar">Adicionar</a></li> 
+						</ul>
+					</div> 
+				</div> 
+			</nav> 
+		</div>
+		<div class="container">
+			<div class="page-header">
+				<div ng-controller="PessoasCtrl">
+					<br>
+					<h3>Pessoas</h3>
+					{{nome}}
+					<div ng-view></div>
+				</div>
+			</div>
+		</div>	
+		<div id="footer">
+			<div class="container">
+				<p class="text-muted credit"> Bruno Augusto</p>
+			</div>
+		</div>	
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-resource.min.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>var $jQuery = jQuery.noConflict();</script>
+
+<script src="pessoas/Pessoas.js"></script>
+<script src="pessoas/PessoasSrv.js"></script>
+<script src="pessoas/PessoasCtrl.js"></script>
+</html>
